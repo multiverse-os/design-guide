@@ -1,5 +1,5 @@
 # Multiverse OS: Design Principals And Guidelines
-===============================================================================
+=================================================
 Multiverse OS is intended to be a collaborative effort, the combined effort of 
 a dedicated team sometimes able to work full time; and volunteers who
 encouraged to participate and contribute as the project takes shape and grows.
@@ -10,10 +10,11 @@ using full hardware virtualizatized ephemeral virtual machines.*
 
 
 ## Go Language
-===============================================================================
+==============
 While components of Multiverse OS will likely expand to be in Ruby, Rust, and 
 C; a large portion of the codebase will inevtiably be in Go language.  Below is 
 a evolving guide that all commits to the repositories should adhere to: 
+
 
 #### No Global Variables
 Global variables should not be used wtih the exception being small subpackages
@@ -31,6 +32,7 @@ spinner subpackage is only necessary to importat if the spinner is intended to
 be used. And so the status of the global variable makes little to no differnece
 in this case. 
 
+
 #### Empty String Comparison 
 When comparing against a blank string, `len(blankString)` should be compared
 over a direct string comparison. The following may at first glance seem the
@@ -46,6 +48,7 @@ same:
   }
 ```
 
+
 Using the Multiverse OS [`benchmark`
 library](https://github.com/multiverse-os/benchmark) Multiverse OS developers
 regularly compare different methods of accomplishing a task. And regularly
@@ -54,7 +57,7 @@ changes. And even after running the gbenchmark for 12 hours, every test came out
 with the `int` comparison version using `len()` preforms better than the blank
 `string` comparison. 
 
-```
+```Bash
 [benchmark] test took [ 207.695µs ms ] to complete 
 Testing Method A: 'String' == ''
 [benchmark] function being tested [ 0x495b80 ] with the name [ main.main.func1 ]
@@ -66,6 +69,7 @@ Testing Method B: leb('String') == 0
 Best function is: 0x495bb0
 
 ```
+
 
 In addition, this also means that we may want to just create functions that will
 be included in a `common` type library: 
