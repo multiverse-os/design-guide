@@ -1,6 +1,4 @@
 # Multiverse OS: Design Principals And Guidelines
-=====
-
 Multiverse OS is intended to be a collaborative effort, the combined effort of 
 a dedicated team sometimes able to work full time; and volunteers who
 encouraged to participate and contribute as the project takes shape and grows.
@@ -11,8 +9,6 @@ using full hardware virtualizatized ephemeral virtual machines.*
 
 
 ## Go Language
-=====
-
 While components of Multiverse OS will likely expand to be in Ruby, Rust, and 
 C; a large portion of the codebase will inevtiably be in Go language.  Below is 
 a evolving guide that all commits to the repositories should adhere to: 
@@ -29,7 +25,16 @@ to compliment the [`cli` framework](https://github.com/multiverse-os/cli).
 
 In this exmaple, global variables are used for the spinner subpackages, which
 contain a single global variable containing all the data needed to load the
-spinner. In this design, all the spinner packages are optional, and so if a
+spinner. *The default example included with the binary program demonstrates this
+specific benchmark, and to really get a better picture of the difference between
+these two methods of checking for blank streams is by testing the benchmark on
+the largest variety of hardware and foundational software.* 
+
+If you decide to test this benchmark, please share your results with use so we 
+can begin to build a statistical analysis program and datasheet to do better
+analysis on this and future benchmark led design decisions.*
+
+In this design, all the spinner packages are optional, and so if a
 spinner subpackage is only necessary to importat if the spinner is intended to
 be used. And so the status of the global variable makes little to no differnece
 in this case. 
@@ -60,28 +65,26 @@ with the `int` comparison version using `len()` preforms better than the blank
 `string` comparison. 
 
 ```Bash
-[benchmark] test took [ 207.695µs ms ] to complete 
-Testing Method A: 'String' == ''
-[benchmark] function being tested [ 0x495b80 ] with the name [ main.main.func1 ]
-[benchmark] test has ran [ 25000 times ] with an average of [ 1.257µs  microseconds ]
-Testing Method B: len('String') == 0
-[benchmark] function being tested [ 0x495bb0 ] with the name [ main.main.func2 ]
-[benchmark] test has ran [ 25000 times ] with an average of [ 572ns  microseconds ]
-[benchmark] test has ran [ 25000 times ] with an average of [ 572ns  microseconds ]
-Best function is: 0x495bb0
-
+    [benchmark] test took [ 207.695µs ms ] to complete 
+    Testing Method A: 'String' == ''
+    [benchmark] function being tested [ 0x495b80 ] with the name [ main.main.func1 ]
+    [benchmark] test has ran [ 25000 times ] with an average of [ 1.257µs  microseconds ]
+    Testing Method B: len('String') == 0
+    [benchmark] function being tested [ 0x495bb0 ] with the name [ main.main.func2 ]
+    [benchmark] test has ran [ 25000 times ] with an average of [ 572ns  microseconds ]
+    [benchmark] test has ran [ 25000 times ] with an average of [ 572ns  microseconds ]
+    Best function is: 0x495bb0
 ```
 
 
 In addition, this also means that we may want to just create functions that will
 be included in a `common` type library: 
 
-
 ```Go 
-
-func Blank(s string) bool { return (len(s) == 0) } 
-func NotBlank(s string) bool { return (len(s) > 0) }
+    func Blank(s string) bool { return (len(s) == 0) } 
+    func NotBlank(s string) bool { return (len(s) > 0) }
 ```
+
 
 ## Comments And Variable Verbosity
 Go Language is a compiled language, and the compiler is able to minify the
