@@ -1,5 +1,14 @@
-# Multiverse OS Design Guide 
-=====
+[<img src="https://avatars2.githubusercontent.com/u/24763891?s=400&u=c1150e7da5667f47159d433d8e49dad99a364f5f&v=4"  width="256px" height="256px" align="right" alt="Multiverse OS Logo">](https://github.com/multiverse-os)
+
+## Multiverse OS Design Guide 
+**URL** [multiverse-os.org](https://multiverse-os.org)
+
+#### Introduction
+A simple interface for storing file descriptors (FDs) in memory, specifically
+being developed as a subcomponent of the Multiverse OS [singularity
+library](https://github.com/multiverse-os/singularity) which leverages memory
+file descriptors to work with executable binary data exclusively in memory. 
+
 
 The Multiverse OS design guide will cover the full range of programming  
 languages used by Multiverse OS; in addition, provide both design principals,
@@ -10,11 +19,13 @@ This documentation will also provide preferred but not required edditique
 suggestions, canned templates to maximize productivity. To communication of 
 peers, submission of code to the repositories, and more. 
 
-Currently only the Go programming language has been initialized, but more 
+Currently only the [Go programming language style
+guide](https://github.com/multiverse-os/design-guide/) has been initialized, but more 
 language style guides are to come, including Git commit style guide.
 
 
-### Planning And Building Community Resource
+
+#### Planning And Building Community Resource
 Currently work is being done on software titled `journald` to establish  
 community tools that encourage cooperation, communication, and increase 
 developer productivity. The developer journals specifically will take 
