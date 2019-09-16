@@ -62,7 +62,7 @@ with the `int` comparison version using `len()` preforms better than the blank
 Testing Method A: 'String' == ''
 [benchmark] function being tested [ 0x495b80 ] with the name [ main.main.func1 ]
 [benchmark] test has ran [ 25000 times ] with an average of [ 1.257µs  microseconds ]
-Testing Method B: leb('String') == 0
+Testing Method B: len('String') == 0
 [benchmark] function being tested [ 0x495bb0 ] with the name [ main.main.func2 ]
 [benchmark] test has ran [ 25000 times ] with an average of [ 572ns  microseconds ]
 [benchmark] test has ran [ 25000 times ] with an average of [ 572ns  microseconds ]
