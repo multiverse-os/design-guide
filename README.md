@@ -1,5 +1,5 @@
 # Multiverse OS Design Guide 
-============================
+=====
 
 The Multiverse OS design guide will cover the full range of programming  
 languages used by Multiverse, in addition to style and edditique related 
