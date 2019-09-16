@@ -48,9 +48,9 @@ letting Microsoft aquire the biggest repositories of open source code.
 Another project that has been in development is a community task, or `TODO` list, 
 that can filter tasks by programming langauge, skill requirement, number of other 
 projects that require a given task to be completed to continue, and this is to be 
-presented in a RPG style "skill tree". 
+presented in a RPG style "`skill tree`". 
 
-This specific "skill tree" style design is intended to provide new, or
+This specific "`skill tree`" style design is intended to provide new, or
 interested volunteer developeprs a way to equickly see what they can contribute
 to so they can get from being interested to actively participating as fast as
 possible. Additionally, we hope it may empower volunteers to maximize their time spent 

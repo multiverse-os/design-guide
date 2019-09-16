@@ -9,8 +9,8 @@ using full hardware virtualizatized ephemeral virtual machines.*
 
 
 ## Go Language
-While components of Multiverse OS will likely expand to be in Ruby, Rust, and 
-C; a large portion of the codebase will inevtiably be in Go language.  Below is 
+While components of Multiverse OS will likely expand to be in `ruby`, `rust`, and 
+`c`; a large portion of the codebase will inevtiably be in `go` language. Below is 
 a evolving guide that all commits to the repositories should adhere to: 
 
 
@@ -25,7 +25,9 @@ to compliment the [`cli` framework](https://github.com/multiverse-os/cli).
 
 In this exmaple, global variables are used for the spinner subpackages, which
 contain a single global variable containing all the data needed to load the
-spinner. *The default example included with the binary program demonstrates this
+spinner. 
+
+*The default example included with the binary program demonstrates this
 specific benchmark, and to really get a better picture of the difference between
 these two methods of checking for blank streams is by testing the benchmark on
 the largest variety of hardware and foundational software.* 
@@ -60,9 +62,10 @@ Using the Multiverse OS [`benchmark`
 library](https://github.com/multiverse-os/benchmark) Multiverse OS developers
 regularly compare different methods of accomplishing a task. And regularly
 re-check these conclusions after major updates to ensure there has been to major
-changes. And even after running the gbenchmark for 12 hours, every test came out
-with the `int` comparison version using `len()` preforms better than the blank
-`string` comparison. 
+changes. And even after running the Multiverse OS maintained Go package `benchmark` 
+for 12 hours, every test came out with the `int` comparison version using `len()` 
+preforms better than the blank `string` comparison. 
+
 
 ```Bash
     [benchmark] test took [ 207.695µs ms ] to complete 
@@ -92,8 +95,8 @@ variables enabling developers to have whatever length without negatigvely
 affecting preformance. 
 
 With this being the case, Multiverse OS developers want to create a synergy
-between a Ruby-like scripting language that is very clear and easy to read, and
-style of Go programming that follows the established pattern. By always opting
+between a `ruby`-like scripting language that is very clear and easy to read, and
+style of `go` programming that follows the established pattern. By always opting
 for full names, focusing on human readability, function names that make sense,
 and design that reads like a recipie book over convuluted or overly complex
 designs; we often reduce the codebase of any library we refactor, despite our
@@ -107,9 +110,7 @@ itself explains what it does.
 Leaving comments that actually 'pop', or stick out, giving them greater effect.
 And for those who favor the single line above each function for documentaiton
 creation, we feel documentation is better served by creating a variety of good
-examples, and pulling information from our CLI, API and other locations in our
+examples, and pulling information from our `cli`, `api` and other locations in our
 software where help text is already naturally being written. 
-
-
 
 
