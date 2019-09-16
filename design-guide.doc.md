@@ -1,5 +1,6 @@
 # Multiverse OS: Design Principals And Guidelines
 =================================================
+
 Multiverse OS is intended to be a collaborative effort, the combined effort of 
 a dedicated team sometimes able to work full time; and volunteers who
 encouraged to participate and contribute as the project takes shape and grows.
@@ -10,7 +11,8 @@ using full hardware virtualizatized ephemeral virtual machines.*
 
 
 ## Go Language
-==============
+=====
+
 While components of Multiverse OS will likely expand to be in Ruby, Rust, and 
 C; a large portion of the codebase will inevtiably be in Go language.  Below is 
 a evolving guide that all commits to the repositories should adhere to: 
