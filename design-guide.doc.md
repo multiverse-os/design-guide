@@ -1,5 +1,5 @@
 # Multiverse OS: Design Principals And Guidelines
-=================================================
+=====
 
 Multiverse OS is intended to be a collaborative effort, the combined effort of 
 a dedicated team sometimes able to work full time; and volunteers who
