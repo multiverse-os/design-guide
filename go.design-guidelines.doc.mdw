@@ -88,6 +88,55 @@ be included in a `common` type library:
     func NotBlank(s string) bool { return (len(s) > 0) }
 ```
 
+## Inline declaration vs. Unix Package
+Will update this later, but for now, the following is equivilent, so the 
+better looking solution that provides more felxibility should be used:
+
+
+```g
+package main
+
+import (
+	"fmt"
+
+	unix "golang.org/x/sys/unix"
+)
+
+func main() {
+	// Write
+	localVariable := unix.POLLIN
+	// Read
+	fmt.Println("localVariable:", localVariable)
+}
+```
+
+The above code when compiled results in a `2MB` file. 
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+const (
+	POLLIN = 0x0001
+	//POLLPRI = 0x0002
+	//POLLOUT = 0x0004
+	//POLLERR = 0x0008
+	//POLLHUP = 0x0010
+	//POLLNVA = 0x0020
+)
+
+func main() {
+	// Write
+	localVariable := POLLIN
+	// Read
+	fmt.Println("localVariable:", localVariable)
+}
+```
+
+The above code when compiled, will also result in a `2MB` file. 
 
 ## Comments And Variable Verbosity
 Go Language is a compiled language, and the compiler is able to minify the
