@@ -162,4 +162,38 @@ creation, we feel documentation is better served by creating a variety of good
 examples, and pulling information from our `cli`, `api` and other locations in our
 software where help text is already naturally being written. 
 
+## Ordering Numeric Inequality Comparisons 
+Multiverse OS developers should always opt for expressiveness so that the code 
+is accessible the widest audience possible.  
+
+This is accomplished by paying attention to small details that add up to more 
+accessible code. 
+
+When dealing with inequality comparisons: (`<`, `<=`, `==`, `>`, `>=`].
+
+The expected lower value should always be first and the expected highest value  
+last: 
+
+```
+if 0 < value && value < 100 {
+  fmt.Println("value is between 0-100")
+}
+
+if value < 10 {
+  fmt.Println("below 10") 
+}
+```
+
+## Developers should never enforce preferences 
+Multiverse OS devlepers should not enforce opinions or preferences with their design; 
+for exmaple, a configuration file should be able to be loaded from any common data type 
+[`TOML`, `JSON`, `YML`, `XML`].  
+
+**The only time we force the users into a decision is when the design improves security, 
+and we always default to a more secure design.**  
+
+
+
+
+
 
