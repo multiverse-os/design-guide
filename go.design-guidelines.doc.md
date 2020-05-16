@@ -248,7 +248,12 @@ where the options are defined in settings; and so we should include brief
 descriptions with the option to obtain full descriptions from the settings 
 pages. 
 
+## Redesigns that allow freedom to extend while remaining backwards compatibile
+This may seem impossible but it can be done if consideration is given, and
+understanding the benefits and purposes of building off existing protocols and
+esigns rather than wiping them out and replacing them. 
 
+.. 
 
 
 
